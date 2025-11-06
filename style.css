@@ -279,3 +279,88 @@ h2 {
   line-height: 1.4 !important;
   font-family: Arial, sans-serif !important;
 }
+
+/* === АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ (mobile-first) === */
+@media (max-width: 768px) {
+  /* Убираем горизонтальный скролл */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* Контейнер — не шире экрана */
+  main, .container, #maintext, #about-text, ul {
+    max-width: 100% !important;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  /* Шапка и футер — не вылезают */
+  header, .blue-footer {
+    padding: 0 15px !important;
+    height: auto;
+    min-height: 70px;
+  }
+
+  /* Логотип и заголовок — не ломают строку */
+  .header-left {
+    gap: 8px;
+  }
+  .header-left h1 {
+    font-size: 16px !important;
+  }
+  .coa, .header-left img.logo {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Навигация — в столбик */
+  .header-right {
+    gap: 15px;
+  }
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+
+  /* Кнопки — на всю ширину, удобные для пальцев */
+  .btn {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 16px !important;
+    font-size: 16px !important;
+    margin: 8px 0 !important;
+    text-align: center;
+  }
+
+  /* Соцсети — меньше, в ряд */
+  .social-icons img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  /* Текст — читаемый */
+  h2, #privet, #title-about {
+    font-size: 24px !important;
+  }
+  main p, ul li, #maintext, #about-text {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Футер — текст по центру, не сжимается */
+  .blue-footer .social-icons {
+    margin-bottom: 8px;
+  }
+  #footer-text {
+    font-size: 12px !important;
+  }
+}
+
+/* === ДЛЯ ПЛАНШЕТОВ (опционально) === */
+@media (max-width: 480px) {
+  .header-left h1 { font-size: 14px !important; }
+  nav a { font-size: 13px; }
+  .btn { padding: 12px !important; }
+}
